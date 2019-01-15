@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .div-log-in{
+            width: 100%;
+        }
+        .form-log-in{
+            width: 260px;
+            margin: 0px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div-log-in">
+        <form class="form-log-in">
+            <label>Username</label>
+            <input type="text" placeholder="Username" v-model="username"/>
+            <label>Password</label>
+            <input type="text" placeholder="Password" v-model="password"/>
+            <input type="checkbox" v-model="checked"><label>Remember me</label><br>
+            <button type="button" v-on:click="login">Login</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        var vmLogin = new Vue({
+            el: '.form-log-in',
+            data:{
+                username: '',
+                password: '',
+                checked: false
+            },
+            methods:{
+                login: function(){
+                    // log in
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>
